@@ -1,0 +1,56 @@
+body {
+    background: rgb(45,45,45);
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+}
+
+* {
+    color: white;
+}
+
+main {
+    font-size: 2em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+label {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.underline {
+    text-decoration: underline white;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+#number {
+    margin-top: 1%;
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#number_label {
+    font-size: 2em;
+}
+
+#result {
+    font-size: 1.8em;
+}

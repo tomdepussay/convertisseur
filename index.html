@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Selectionnez la base de votre nombre</h1>
+        <main>
+            <input class="hidden" type="radio" name="base" value="2" id="base2" checked onclick="menu()">
+            <label class="underline" id="base2_label" for="base2">2</label>
+
+            <input class="hidden" type="radio" name="base" value="8" id="base8" onclick="menu()">
+            <label class="" id="base8_label" for="base8">8</label>
+
+            <input class="hidden" type="radio" name="base" value="10" id="base10" onclick="menu()">
+            <label class="" id="base10_label" for="base10">10</label>
+
+            <input class="hidden" type="radio" name="base" value="16" id="base16" onclick="menu()">
+            <label class="" id="base16_label" for="base16">16</label>
+
+        </main>
+        <div>
+            <label id="number_label" for="number">Entrez votre nombre</label><br>
+            <input id="number" type="text" onkeyup="menu()" autofocus>
+        </div>
+        <div>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
