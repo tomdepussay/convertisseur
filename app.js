@@ -1,22 +1,22 @@
 function to_decimal(n,base){
     let total = 0;
     for (let i = 0; i < n.length; i++){
-        if ((n[n.length - (i+1)]) == 'A'){
+        if ((n[n.length - (i+1)]) == 'A' || (n[n.length - (i+1)]) == 'a'){
             total += 10 * (base**i);
         }
-        if ((n[n.length - (i+1)]) == 'B'){
+        if ((n[n.length - (i+1)]) == 'B' || (n[n.length - (i+1)]) == 'b'){
             total += 11 * (base**i);
         }
-        if ((n[n.length - (i+1)]) == 'C'){
+        if ((n[n.length - (i+1)]) == 'C' || (n[n.length - (i+1)]) == 'c'){
             total += 12 * (base**i);
         }
-        if ((n[n.length - (i+1)]) == 'D'){
+        if ((n[n.length - (i+1)]) == 'D' || (n[n.length - (i+1)]) == 'd'){
             total += 13 * (base**i);
         }
-        if ((n[n.length - (i+1)]) == 'E'){
+        if ((n[n.length - (i+1)]) == 'E' || (n[n.length - (i+1)]) == 'e'){
             total += 14 * (base**i);
         }
-        if ((n[n.length - (i+1)]) == 'F'){
+        if ((n[n.length - (i+1)]) == 'F' || (n[n.length - (i+1)]) == 'f'){
             total += 15 * (base**i);
         }
         if ((n[n.length - (i+1)]) >= 0 && (n[n.length - (i+1)]) <= 9){
@@ -123,7 +123,7 @@ function is_correct(n,base){
             }
         }
         if (base == 16){
-            if (n[i] != '0' && n[i] != '1' && n[i] != '2' && n[i] != '3' && n[i] != '4' && n[i] != '5' && n[i] != '6' && n[i] != '7' && n[i] != '8' && n[i] != '9' && n[i] != 'A' && n[i] != 'B' && n[i] != 'C' && n[i] != 'D' && n[i] != 'E' && n[i] != 'F'){
+            if (n[i] != '0' && n[i] != '1' && n[i] != '2' && n[i] != '3' && n[i] != '4' && n[i] != '5' && n[i] != '6' && n[i] != '7' && n[i] != '8' && n[i] != '9' && n[i] != 'A' && n[i] != 'B' && n[i] != 'C' && n[i] != 'D' && n[i] != 'E' && n[i] != 'F' && n[i] != 'a' && n[i] != 'b' && n[i] != 'c' && n[i] != 'd' && n[i] != 'e' && n[i] != 'f'){
                 return false;
             }
         }
@@ -143,7 +143,7 @@ function menu() {
 
     let good = true;
     if (n == 0 || n == ''){
-        document.getElementById('result').innerHTML = "Votre nombre est invalide";
+        document.getElementById('result').innerHTML = "";
         good = false;
     }
     if (is_correct(n,base) == false){
